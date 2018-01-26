@@ -17,6 +17,7 @@ set serialrx_provider = IBUS
 set blackbox_device = SPIFLASH
 set min_throttle = 1039
 set align_board_yaw = 90
+set disarm_kill_switch = OFF
 
 # profile
 profile 0
