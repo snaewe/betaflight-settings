@@ -1,3 +1,4 @@
+name X210pro
 
 # serial
 serial 0 64 115200 57600 0 115200
