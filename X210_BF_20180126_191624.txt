@@ -2,6 +2,7 @@ name X210pro
 
 # serial
 serial 0 64 115200 57600 0 115200
+serial 5 1 115200 57600 0 115200
 
 # aux
 aux 0 0 2 1600 2100
@@ -19,6 +20,7 @@ set serialrx_provider = IBUS
 set blackbox_device = SPIFLASH
 set min_throttle = 1039
 set align_board_yaw = 90
+set vbat_warning_cell_voltage = 34
 set current_meter = NONE
 set battery_meter = ADC
 set disarm_kill_switch = OFF
@@ -31,4 +33,4 @@ rateprofile 0
 
 set rc_rate = 90
 set rc_expo = 10
-
+
