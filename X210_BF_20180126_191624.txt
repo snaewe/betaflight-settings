@@ -1,29 +1,39 @@
 name X210pro
 
+feature INFLIGHT_ACC_CAL
+
+beeper -ON_USB
 # serial
 serial 0 64 115200 57600 0 115200
-serial 5 1 115200 57600 0 115200
+serial 5 1 38400 57600 0 115200
 
 # aux
 aux 0 0 2 1600 2100
 aux 1 1 0 900 1300
 aux 2 2 0 1300 1700
 aux 3 13 3 1700 2100
-aux 4 36 4 1700 2100
+aux 4 28 5 1700 2100
+aux 5 36 4 1700 2100
 
 # rxfail
 rxfail 4 s 1000
 rxfail 6 s 1000
+rxfail 7 s 1900
+rxfail 9 s 1000
 
 # master
+set baro_hardware = NONE
 set serialrx_provider = IBUS
 set blackbox_device = SPIFLASH
 set min_throttle = 1039
 set align_board_yaw = 90
+set vbat_max_cell_voltage = 44
 set vbat_warning_cell_voltage = 34
 set current_meter = NONE
 set battery_meter = ADC
 set disarm_kill_switch = OFF
+set deadband = 1
+set yaw_deadband = 1
 
 # profile
 profile 0
