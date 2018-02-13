@@ -16,21 +16,42 @@ name OmnibusF4
 
 
 # feature
-feature -RX_SERIAL
+feature -OSD
+feature LED_STRIP
 
 # beeper
+beeper -ON_USB
 
 # map
 
 # serial
+serial 0 64 115200 57600 0 115200
 
 # led
+led 0 5,4:S:A:10
+led 1 5,5:S:CI:15
+led 2 5,6:S:CI:15
+led 3 5,7:S:CI:15
+led 4 5,8:S:CW:15
+led 5 9,4:S:A:0
+led 6 9,5:S:CI:15
+led 7 9,6:S:CI:15
+led 8 9,7:S:CI:15
+led 9 9,8:S:CW:15
 
 # color
 
 # mode_color
+mode_color 6 1 2
 
 # aux
+aux 0 0 2 1700 2100
+aux 1 1 0 900 1300
+aux 2 2 0 1300 1700
+aux 3 3 1 1700 2100
+aux 4 15 3 1700 2100
+aux 5 28 5 1700 2100
+aux 6 36 4 1700 2100
 
 # adjrange
 
@@ -39,15 +60,25 @@ feature -RX_SERIAL
 # vtx
 
 # rxfail
+rxfail 4 s 1000
+rxfail 6 s 1000
+rxfail 9 s 1000
 
 # master
+set serialrx_provider = IBUS
+set min_throttle = 1038
 set align_board_yaw = 180
 set ibata_scale = 179
+set disarm_kill_switch = OFF
+set deadband = 1
 set pid_process_denom = 16
 
 # profile
 profile 0
 
+set p_vel = 50
+set i_vel = 5
+set d_vel = 30
 
 # rateprofile
 rateprofile 0
